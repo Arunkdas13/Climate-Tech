@@ -14,7 +14,7 @@ view_mode = st.sidebar.radio("Choose View:", ["📈 Scatterplot", "🗺️ Choro
 @st.cache_data
 def load_data():
     df = pd.read_csv("county_climate_summary.csv")
-    gdf = gpd.read_file("tl_2022_us_county.shp")
+    gdf = gpd.read_file("cb_2022_us_county_5m.shp")
     gdf["GEOID"] = gdf["STATEFP"] + gdf["COUNTYFP"]
     df["GEOID"] = df["GEOID"].astype(str).str.zfill(5)
 
