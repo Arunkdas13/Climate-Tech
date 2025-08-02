@@ -4,3 +4,7 @@ geopandas
 matplotlib
 geoplot
 mapclassify
+plotly
+fiona
+shapely
+pyproj
